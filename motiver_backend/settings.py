@@ -10,8 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import pymysql
+pymysql.install_as_MySQLdb() 
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +29,7 @@ SECRET_KEY = 'django-insecure-lb!m0bpvswf(@ob-sfl#t!ec3ud_+b)au62g**q&aqb=z@#wmy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['motivertech.com','www.motivertech.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -73,18 +76,24 @@ WSGI_APPLICATION = 'motiver_backend.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+# Configure MySQL (created via phpMyAdmin) or override via environment variables.
+# Example: create a database `motiver_db` in phpMyAdmin and set DB user/password.
+# If you prefer SQLite for quick local testing, replace this block accordingly.
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'motiver_db',           # Set your PostgreSQL database name
-        'USER': 'motiver_user',         # Set your PostgreSQL username
-        'PASSWORD': 'your_password',    # Set your PostgreSQL password
-        'HOST': 'localhost',            # Or your PostgreSQL host
-        'PORT': '5432',                 # Default PostgreSQL port
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'motiver_db',        # must exist
+        'USER': 'root',      # must exist
+        'PASSWORD': '',# exact password
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
+# Notes:
+# 1) Create the database in phpMyAdmin (SQL tab or UI) with UTF8MB4 collation.
+# 2) Ensure a MySQL Python driver is installed: `pip install mysqlclient`.
+# 3) Set environment variables (or update values above) before running migrations.
 
 
 # Password validation
