@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -76,8 +77,12 @@ WSGI_APPLICATION = 'motiver_backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'motiver_db',           # Set your PostgreSQL database name
+        'USER': 'motiver_user',         # Set your PostgreSQL username
+        'PASSWORD': 'your_password',    # Set your PostgreSQL password
+        'HOST': 'localhost',            # Or your PostgreSQL host
+        'PORT': '5432',                 # Default PostgreSQL port
     }
 }
 
