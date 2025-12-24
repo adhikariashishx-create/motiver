@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Motiver Tech</title>
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/variables.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components.css' %}">
+    <link rel="stylesheet" href="{% static 'css/pages.css' %}">
+</head>
+
+<body>
+    {% include 'nav.html' %}
+    <main>
+        <section class="container">
+            <div class="page-head">
+                <h2>Blog</h2>
+                <p class="subtle">Insights, news, and updates from Motiver Tech.</p>
+            </div>
+        </section>
+        <section class="container grid cards-3" data-list="blog">
+            <!-- Blog cards go here -->
+            <article class="card">
+                <h3>How We Build</h3>
+                <p class="subtle">Our approach to modern web development.</p>
+            </article>
+            <article class="card">
+                <h3>Security Matters</h3>
+                <p class="subtle">Best practices for keeping your stack safe.</p>
+            </article>
+            <article class="card">
+                <h3>Scaling Up</h3>
+                <p class="subtle">Lessons learned from real-world growth.</p>
+            </article>
+        </section>
+    </main>
+    {% include 'footer.html' %}
+    <script src="{% static 'js/layout.js' %}"></script>
+    <script src="{% static 'js/ui.js' %}"></script>
+</body>
+
+</html>

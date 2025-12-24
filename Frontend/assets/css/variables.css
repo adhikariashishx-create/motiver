@@ -1,0 +1,31 @@
+/* variables.css: Dark glassmorphism theme variables */
+:root {
+  --bg-start: #0f1117;
+  --bg-end: #131722;
+  --text-primary: #e5e7eb;
+  --text-secondary: #a5adbd;
+  --accent: #7dd3fc;
+  --accent-hover: #38bdf8;
+  --glass: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.12);
+  --accent-glow: #7dd3fc;
+  --nav-bg: #181c24;
+  --footer-bg: #181c24;
+
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --container: 1200px;
+
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.5);
+  --blur: 14px;
+}

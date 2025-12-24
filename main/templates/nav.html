@@ -1,0 +1,23 @@
+{% load static %}
+<header class="site-header">
+    <div class="container nav-wrapper">
+        <img src="{% static 'img/logo.webp' %}" alt="Motiver Tech Logo">
+        <a href="/" class="logo">Motiver Tech</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" aria-label="Primary">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/projects/">Projects</a></li>
+                <li><a href="/team/">Our Team</a></li>
+                <li><a href="/contact/">Contact Us</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/careers/">Careers</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="nav-overlay" tabindex="-1" aria-hidden="true"></div>
+</header>

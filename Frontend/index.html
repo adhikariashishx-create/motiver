@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Motiver Tech — Home</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <style>
+        /* Remove margin-bottom from footer links */
+        .footer-col li {
+            margin-bottom: 0 !important;
+        }
+
+        /* --- Improved mobile hero layout --- */
+        @media (max-width: 900px) {
+            .hero-section {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-top: 1.2rem !important;
+            }
+
+            .hero-visual {
+                order: -1;
+                margin-bottom: 1.2rem;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .hero-content {
+                margin-top: 0 !important;
+                max-width: 100vw;
+            }
+
+            .hero-section .hero-search {
+                margin-bottom: 1.2rem;
+            }
+        }
+
+        /* Responsive improvements for home page */
+        .hero-section {
+            flex-wrap: wrap;
+            gap: 2.5rem;
+        }
+
+        .hero-content,
+        .hero-visual {
+            min-width: 280px;
+            max-width: 520px;
+        }
+
+        @media (max-width: 900px) {
+            .hero-section {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-top: 2.2rem !important;
+            }
+
+            .hero-content {
+                margin-top: 0 !important;
+                max-width: 100vw;
+            }
+
+            .hero-visual {
+                max-width: 100vw;
+                justify-content: flex-start;
+            }
+
+            .hero-search {
+                flex-direction: column;
+                gap: 0.7rem;
+            }
+
+            .hero-search input,
+            .hero-search select,
+            .hero-search button {
+                width: 100%;
+                border-radius: 1.5em !important;
+            }
+        }
+
+        .features-section {
+            flex-wrap: wrap;
+            gap: 2.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .features-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .feature-card {
+                max-width: 100vw;
+            }
+        }
+
+        .popular-services-section .services-grid {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media (max-width: 900px) {
+            .popular-services-section .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="site-nav"></div>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section container"
+        style="margin-top: 3rem; padding-top: 3.5rem; padding-bottom: 2.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2.5rem;">
+        <div class="hero-content" style="flex: 1 1 340px; min-width: 320px; max-width: 520px; margin-top: 0;">
+            <h1 style="font-size: 2.6rem; font-weight: 800; line-height: 1.1; margin-bottom: 1.2rem;">Empowering Your
+                Digital Journey</h1>
+            <p style="font-size: 1.18rem; color: var(--text-secondary); margin-bottom: 2.2rem;">Work with Motiver Tech
+                to build, launch, and scale your next big idea. We deliver modern, secure, and scalable solutions for
+                startups and enterprises.</p>
+            <form class="hero-search" style="display: flex; gap: 0.5rem; max-width: 420px;">
+                <input type="text" placeholder="Search for..."
+                    style="flex: 2 1 0; padding: 0.9em 1.2em; border-radius: 2em; border: 1.5px solid var(--border); background: var(--glass); color: var(--text-primary); font-size: 1.1rem; outline: none;" />
+                <select
+                    style="flex: 1 1 0; border-radius: 2em; border: 1.5px solid var(--border); background: var(--glass); color: var(--text-primary); font-size: 1.1rem; padding: 0.5em 1.2em; outline: none;">
+                    <option>Services</option>
+                    <option>Projects</option>
+                    <option>Team</option>
+                    <option>Blog</option>
+                </select>
+                <button type="submit"
+                    style="border-radius: 2em; background: var(--accent); color: #fff; font-weight: 700; font-size: 1.1rem; border: none; padding: .5em 2em; box-shadow: var(--shadow-soft);">Search</button>
+            </form>
+        </div>
+        <div class="hero-visual"
+            style="flex: 1 1 340px; min-width: 320px; max-width: 520px; display: flex; align-items: center; justify-content: center;">
+            <img src="assets/img/digital.jpg" alt="Digital Collaboration Illustration"
+                style="width: 100%; max-width: 420px; height: auto;" loading="lazy" />
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features-section container"
+        style="padding: 2.5rem 0 1.5rem 0; display: flex; flex-wrap: wrap; gap: 2.5rem; justify-content: center;">
+        <div class="feature-card"
+            style="flex: 1 1 220px; min-width: 220px; max-width: 340px; background: var(--glass); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); padding: 2.2rem 1.5rem; text-align: center;">
+            <div style="font-size: 2.2rem; margin-bottom: 0.7rem;">🔒</div>
+            <h3 style="font-size: 1.18rem; font-weight: 700; margin-bottom: 0.5rem;">Secure Solutions</h3>
+            <p style="color: var(--text-secondary);">Your data and products are protected with industry best practices
+                and modern security standards.</p>
+        </div>
+        <div class="feature-card"
+            style="flex: 1 1 220px; min-width: 220px; max-width: 340px; background: var(--glass); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); padding: 2.2rem 1.5rem; text-align: center;">
+            <div style="font-size: 2.2rem; margin-bottom: 0.7rem;">⚡</div>
+            <h3 style="font-size: 1.18rem; font-weight: 700; margin-bottom: 0.5rem;">Fast Delivery</h3>
+            <p style="color: var(--text-secondary);">We deliver projects on time, every time, so you can focus on growth
+                and innovation.</p>
+        </div>
+        <div class="feature-card"
+            style="flex: 1 1 220px; min-width: 220px; max-width: 340px; background: var(--glass); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); padding: 2.2rem 1.5rem; text-align: center;">
+            <div style="font-size: 2.2rem; margin-bottom: 0.7rem;">💬</div>
+            <h3 style="font-size: 1.18rem; font-weight: 700; margin-bottom: 0.5rem;">24/7 Support</h3>
+            <p style="color: var(--text-secondary);">Our team is always available to help you with any questions or
+                issues, day or night.</p>
+        </div>
+        <div class="feature-card"
+            style="flex: 1 1 220px; min-width: 220px; max-width: 340px; background: var(--glass); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); padding: 2.2rem 1.5rem; text-align: center;">
+            <div style="font-size: 2.2rem; margin-bottom: 0.7rem;">🌐</div>
+            <h3 style="font-size: 1.18rem; font-weight: 700; margin-bottom: 0.5rem;">Global Reach</h3>
+            <p style="color: var(--text-secondary);">Expand your business worldwide with our scalable and robust digital
+                solutions.</p>
+        </div>
+        <div class="feature-card"
+            style="flex: 1 1 220px; min-width: 220px; max-width: 340px; background: var(--glass); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); padding: 2.2rem 1.5rem; text-align: center;">
+            <div style="font-size: 2.2rem; margin-bottom: 0.7rem;">🛡️</div>
+            <h3 style="font-size: 1.18rem; font-weight: 700; margin-bottom: 0.5rem;">Trusted Security</h3>
+            <p style="color: var(--text-secondary);">We implement the latest security protocols to keep your data safe
+                and your business compliant.</p>
+        </div>
+        <div class="feature-card"
+            style="flex: 1 1 220px; min-width: 220px; max-width: 340px; background: var(--glass); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); padding: 2.2rem 1.5rem; text-align: center;">
+            <div style="font-size: 2.2rem; margin-bottom: 0.7rem;">🤝</div>
+            <h3 style="font-size: 1.18rem; font-weight: 700; margin-bottom: 0.5rem;">Client Partnership</h3>
+            <p style="color: var(--text-secondary);">We work closely with our clients to ensure their vision is realized
+                every step of the way.</p>
+        </div>
+    </section>
+
+    <!-- CTA SECTION ABOVE SERVICES -->
+    <section class="cta-highlight-section container"
+        style="padding: 2.5rem 0 1.5rem 0; display: flex; justify-content: center;">
+        <div class="cta-card"
+            style="background: var(--glass); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); padding: 2.5rem 2rem; max-width: 700px; text-align: center; margin: 0 auto;">
+            <h2 style="font-size: 2.1rem; font-weight: 800; margin-bottom: 1.1rem; color: var(--accent);">Unlock Your
+                Business Potential</h2>
+            <p style="color: var(--text-secondary); font-size: 1.15rem; margin-bottom: 1.7rem;">Discover how Motiver
+                Tech can help you accelerate growth, streamline operations, and stay ahead of the competition with our
+                innovative digital solutions. Our team is dedicated to delivering results that matter for your business.
+            </p>
+            <a href="#"
+                style="display: inline-block; background: var(--accent); color: #fff; font-weight: 700; font-size: 1.1rem; border-radius: 2em; padding: 0.9em 2.2em; text-decoration: none; box-shadow: 0 2px 16px 0 var(--accent-glow, #7dd3fc44); transition: background 0.2s, box-shadow 0.2s;">Get
+                Started</a>
+        </div>
+    </section>
+    <!-- POPULAR SERVICES SECTION -->
+    <section class="popular-services-section container" style="padding: 2.5rem 0 2.5rem 0;">
+        <h2 style="font-size: 2.1rem; font-weight: 800; text-align: center; margin-bottom: 0.7rem;">Most Popular
+            Services</h2>
+        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2.2rem;">Explore our top-requested
+            services, trusted by startups and enterprises worldwide.</p>
+        <div class="services-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+            <div class="service-card glass"
+                style="background: var(--glass); border-radius: var(--radius-md); box-shadow: var(--shadow-soft); padding: 1.5rem 1.2rem;">
+                <div style="font-size: 2.1rem; margin-bottom: 0.7rem;">💻</div>
+                <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem;">Custom Web Development</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 0.7rem;">Modern, scalable websites and web apps
+                    tailored to your business needs.</p>
+                <div style="font-size: 0.98rem; color: var(--accent); font-weight: 600;">from $499</div>
+            </div>
+            <div class="service-card glass"
+                style="background: var(--glass); border-radius: var(--radius-md); box-shadow: var(--shadow-soft); padding: 1.5rem 1.2rem;">
+                <div style="font-size: 2.1rem; margin-bottom: 0.7rem;">☁️</div>
+                <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem;">Cloud & DevOps</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 0.7rem;">Deploy, monitor, and scale your apps
+                    with our expert cloud and DevOps services.</p>
+                <div style="font-size: 0.98rem; color: var(--accent); font-weight: 600;">from $299</div>
+            </div>
+            <div class="service-card glass"
+                style="background: var(--glass); border-radius: var(--radius-md); box-shadow: var(--shadow-soft); padding: 1.5rem 1.2rem;">
+                <div style="font-size: 2.1rem; margin-bottom: 0.7rem;">🔒</div>
+                <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem;">Security Consulting</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 0.7rem;">Protect your business with risk
+                    assessments, audits, and best practices.</p>
+                <div style="font-size: 0.98rem; color: var(--accent); font-weight: 600;">from $199</div>
+            </div>
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/ui.js"></script>
+</body>
+
+</html>

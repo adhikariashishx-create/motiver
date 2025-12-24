@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Services | Motiver Tech</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/variables.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/components.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/pages.css' %}" />
+</head>
+
+<body>
+    {% include 'nav.html' %}
+    <main>
+        <!-- Hero Section -->
+        <section class="services-hero">
+            <h1>Our Services</h1>
+            <p class="subtitle">Innovative solutions tailored for modern businesses.</p>
+        </section>
+        <!-- Services Grid -->
+        <section class="services-grid-section">
+            <div class="services-grid" id="servicesGrid">
+                <article class="service-card glass" style="--delay:0ms;">
+                    <div class="service-icon" aria-hidden="true">💻</div>
+                    <h2>Frontend Engineering</h2>
+                    <p>Modern, accessible, and performant UIs for every device.</p>
+                </article>
+                <article class="service-card glass" style="--delay:100ms;">
+                    <div class="service-icon" aria-hidden="true">🔗</div>
+                    <h2>Development & APIs</h2>
+                    <p>Robust backend systems and secure, scalable APIs.</p>
+                </article>
+                <article class="service-card glass" style="--delay:200ms;">
+                    <div class="service-icon" aria-hidden="true">☁️</div>
+                    <h2>Deployment & Support</h2>
+                    <p>Cloud-native deployments, monitoring, and ongoing support.</p>
+                </article>
+                <article class="service-card glass" style="--delay:300ms;">
+                    <div class="service-icon" aria-hidden="true">📈</div>
+                    <h2>Digital Marketing</h2>
+                    <p>SEO, SEM, and social media strategies to grow your brand online.</p>
+                </article>
+                <article class="service-card glass" style="--delay:400ms;">
+                    <div class="service-icon" aria-hidden="true">📝</div>
+                    <h2>Documentation</h2>
+                    <p>Clear, comprehensive docs and technical writing for your products.</p>
+                </article>
+                <article class="service-card glass" style="--delay:500ms;">
+                    <div class="service-icon" aria-hidden="true">🎨</div>
+                    <h2>Graphics Design</h2>
+                    <p>Branding, UI assets, and creative visuals for digital experiences.</p>
+                </article>
+                <article class="service-card glass" style="--delay:600ms;">
+                    <div class="service-icon" aria-hidden="true">🔒</div>
+                    <h2>Security Consulting</h2>
+                    <p>Risk assessment, audits, and best practices for secure systems.</p>
+                </article>
+                <article class="service-card glass" style="--delay:700ms;">
+                    <div class="service-icon" aria-hidden="true">🤝</div>
+                    <h2>Consulting & Training</h2>
+                    <p>Workshops, upskilling, and expert advice for your tech teams.</p>
+                </article>
+            </div>
+        </section>
+        <!-- Tabs Section -->
+        <section class="services-tabs-section">
+            <nav class="tabs-nav" role="tablist" aria-label="Service Details">
+                <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-panel-1"
+                    id="tab-1">Design & UI</button>
+                <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-panel-1"
+                    id="tab-2">Development & APIs</button>
+                <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-panel-1"
+                    id="tab-3">Deployment & Support</button>
+            </nav>
+            <div class="tabs-panels">
+                <section class="tab-panel glass active" id="tab-panel-1" role="tabpanel" aria-labelledby="tab-1">
+                    <h3 id="tab-panel-title-1">Design & UI</h3>
+                    <ul id="tab-panel-list-1">
+                        <li>Custom, brand-aligned interfaces</li>
+                        <li>Mobile-first, responsive layouts</li>
+                        <li>Accessibility and usability best practices</li>
+                    </ul>
+                </section>
+                <section class="tab-panel glass" id="tab-panel-2" role="tabpanel" aria-labelledby="tab-2" hidden>
+                    <h3 id="tab-panel-title-2">Development & APIs</h3>
+                    <ul id="tab-panel-list-2">
+                        <li>Robust backend systems</li>
+                        <li>Secure, scalable APIs</li>
+                        <li>Integration with third-party services</li>
+                    </ul>
+                </section>
+                <section class="tab-panel glass" id="tab-panel-3" role="tabpanel" aria-labelledby="tab-3" hidden>
+                    <h3 id="tab-panel-title-3">Deployment & Support</h3>
+                    <ul id="tab-panel-list-3">
+                        <li>Cloud-native deployments</li>
+                        <li>Monitoring and ongoing support</li>
+                        <li>Performance optimization</li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+        <!-- Call to Action -->
+        <section class="services-cta-section">
+            <div class="cta-card glass">
+                <h2>Ready to build something extraordinary?</h2>
+                <a href="/contact/" class="cta-btn">Contact Us</a>
+            </div>
+        </section>
+    </main>
+    {% include 'footer.html' %}
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script>
+        // Dynamic tab content for single tab-panel
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const panelTitle = document.getElementById('tab-panel-title');
+            const panelList = document.getElementById('tab-panel-list');
+            const tabContent = [
+                {
+                    title: 'Design & UI',
+                    items: [
+                        'Custom, brand-aligned interfaces',
+                        'Mobile-first, responsive layouts',
+                        'Accessibility and usability best practices'
+                    ]
+                },
+                {
+                    title: 'Development & APIs',
+                    items: [
+                        'RESTful and GraphQL API design',
+                        'Secure authentication and authorization',
+                        'Integration with third-party services'
+                    ]
+                },
+                {
+                    title: 'Deployment & Support',
+                    items: [
+                        'Cloud-native CI/CD pipelines',
+                        '24/7 monitoring and support',
+                        'Performance optimization and scaling'
+                    ]
+                }
+            ];
+            tabBtns.forEach((btn, i) => {
+                btn.addEventListener('click', () => {
+                    tabBtns.forEach(b => {
+                        b.classList.remove('active');
+                        b.setAttribute('aria-selected', 'false');
+                    });
+                    btn.classList.add('active');
+                    btn.setAttribute('aria-selected', 'true');
+                    // Update panel content
+                    panelTitle.textContent = tabContent[i].title;
+                    panelList.innerHTML = tabContent[i].items.map(item => `<li>${item}</li>`).join('');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
