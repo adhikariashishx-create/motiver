@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-lb!m0bpvswf(@ob-sfl#t!ec3ud_+b)au62g**q&aqb=z@#wmy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['motivertech.com','www.motivertech.com', 'localhost', '127.0.0.1']
+# ALLOWED_HOSTS = ['motivertech.com','www.motivertech.com', 'localhost', '127.0.0.1']
 
 
 # Application definition

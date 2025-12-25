@@ -5,8 +5,8 @@ import sys
 
 
 def main():
-    from django.core.management.commands.runserver import Command as runserver
-    runserver.default_port = "30102"
+    # from django.core.management.commands.runserver import Command as runserver
+    # runserver.default_port = "30102"
 
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'motiver_backend.settings')
